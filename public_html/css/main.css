@@ -1,0 +1,150 @@
+body{background-color: black;}
+#panel{
+	background-color: black;
+	width: 90%;
+	margin:0 auto;
+	padding: 30px;
+}
+
+.day , .date-block{
+	float: left;
+	width: calc(100%/7);
+	color: white;
+	font-size: 1.1rem;
+
+}
+#dates{
+	
+	border-right:1px solid white ;
+	border-bottom: 1px solid white;
+}
+.date-block{
+	border-top: 1px solid white;
+	border-left:1px solid white;
+	height: 15.5vh;
+	padding: 0 2px;
+	overflow:auto;
+	
+}
+.error-msg{
+	display: none;
+}
+.error-msg.open{
+	display: block;
+}
+.event{
+	position: relative;
+	padding:0 6px;
+	background: orange;
+	color: white;
+	border-radius: 12px;
+	margin-bottom: 2px;
+	height: 26px;
+	
+}
+.event:hover{
+    animation-duration: 0.3s;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.6;
+    }
+
+}
+.event .title{
+	float: left;
+}
+.event .from{
+	float: right;
+}
+.date-block.empty{
+	background-color: black;
+	opacity: 50%;
+}
+#header{
+	font-size: 3em;
+	font-weight: bold;
+	color: white;
+}
+#info-panel{
+	position: fixed;
+	background-color: #fff;
+	border: #000 solid 1px;
+	width: 280px;
+	display: none;
+}
+#info-panel.open{
+	display: block;
+}
+
+.close{	
+	position: relative;
+	top:5px;
+	right: 5px;
+	cursor: pointer;
+}
+#info-panel .title,#info-panel .time-picker{
+	border-bottom: 1px solid #000;
+	font-weight: bold;
+}
+
+
+
+#info-panel .title,#info-panel .time-picker,#info-panel .content{
+	padding: 5px;
+}
+.time-picker .selected-date{
+	text-align: center;
+}
+.selected-date{
+	font-size: 1.2rem;
+}
+#des{
+	width: 100%;
+	
+}
+#info-panel  button{
+	display: none;
+	font-size: 18px;
+}
+#info-panel.new button.create,#info-panel.new button.cancel{
+	display: block;
+	float: left;
+	width: 50%;
+	border: none;
+	border-top: 1px solid #000;
+	cursor: pointer;
+	color: white;
+}
+#info-panel.update button.update,#info-panel.update button.cancel{
+	display: block;
+	float: left;
+	width: 50%;
+	border: none;
+	border-top: 1px solid #000;
+	cursor: pointer;
+	color: white;
+}
+#info-panel.update button.delete{
+	display: block;
+	float: left;
+	width: 100%;
+	background-color: rgb(230, 17, 17);
+	border: none;
+	color: white;
+	cursor: pointer;
+}
+button.update,button.create{
+	background-color: rgb(6, 180, 6);
+		
+}
+button.cancel{
+	background-color: rgba(128, 127, 127, 0.514);
+}
